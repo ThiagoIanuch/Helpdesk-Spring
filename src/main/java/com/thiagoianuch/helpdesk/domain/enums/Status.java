@@ -1,12 +1,12 @@
-package com.thiagoianuch.helpdesk.domains.enums;
+package com.thiagoianuch.helpdesk.domain.enums;
 
-public enum Perfil {
-	ADMIN(0, "ROLE_ADMIN"), CLIENTE(1, "ROLE_CLIENTE"), TECNICO(2, "ROLE_TECNICO");
+public enum Status {
+	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"), ENCERRADO(2, "ENCERRADO");
 	
 	private Integer codigo;
 	private String descricao;
 
-	Perfil(Integer codigo, String descricao) {
+	Status(Integer codigo, String descricao) {
 		this.codigo = codigo;
 		this.descricao = descricao;
 	}
@@ -19,19 +19,19 @@ public enum Perfil {
 	}	
 	
 	@SuppressWarnings("unused")
-	public static Perfil toEnum(Integer codigo) {
+	public static Status toEnum(Integer codigo) {
 		if(codigo == null) {
 			if(codigo == null) {
 				return null;
 			}
 			
-			for(Perfil p : Perfil.values()) {
+			for(Status p : Status.values()) {
 				if(codigo.equals(p.getCodigo())) {
 					return p;
 				}
 			}
 		}
 		
-		throw new IllegalArgumentException("Perfil inválido");
+		throw new IllegalArgumentException("Status inválido");
 	}
 }

@@ -1,4 +1,4 @@
-package com.thiagoianuch.helpdesk.domains.enums;
+package com.thiagoianuch.helpdesk.domain.enums;
 
 public enum Prioridade {
 	BAIXA(0, "BAIXA"), MEDIA(1, "MÉDIA"), ALTA(2, "ALTA");
